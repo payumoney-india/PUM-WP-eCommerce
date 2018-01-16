@@ -44,7 +44,7 @@ function gateway_PayU($seperator, $sessionid) {
   $ship_country_iso3 = $countryarray[$PayUdata[16][0]];
  $mode = (get_option('PayU_Mode') == 1) ? 'TEST' : 'LIVE';
   if ($mode == 'TEST')
-    $PayU_url = 'https://test.payu.in/_payment';
+    $PayU_url = 'https://sandboxsecure.payu.in/_payment';
   else
     $PayU_url = 'https://secure.payu.in/_payment';
   $data['key'] = get_option('key');
